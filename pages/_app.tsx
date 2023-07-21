@@ -1,12 +1,17 @@
-import '../styles/tailwind.css';
-import Layout from '../components/Layout';
+import { ApolloProvider } from '@apollo/client/react';
 import type { AppProps } from 'next/app';
+
+import Layout from '../components/Layout';
+import apolloClient from '../lib/apollo';
+import '../styles/tailwind.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ApolloProvider client={apolloClient}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ApolloProvider>
   );
 }
 
