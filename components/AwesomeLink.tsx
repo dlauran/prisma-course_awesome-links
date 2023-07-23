@@ -6,7 +6,7 @@ interface Props {
   title: string;
   category: string;
   description: string;
-  id: number;
+  id: string;
 }
 
 export const AwesomeLink: React.FC<Props> = ({
@@ -15,7 +15,7 @@ export const AwesomeLink: React.FC<Props> = ({
   title,
   category,
   description,
-  id,
+  id
 }) => {
   return (
     <div key={id} className="shadow  max-w-md  rounded">
