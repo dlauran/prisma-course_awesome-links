@@ -1,6 +1,8 @@
 // /graphql/types/Link.ts
 import { builder } from '../builder';
 
+import prisma from '../../lib/prisma';
+
 builder.prismaObject('Link', {
   fields: (t) => ({
     id: t.exposeID('id'),
